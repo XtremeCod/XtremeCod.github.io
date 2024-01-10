@@ -3,37 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disponible Próximamente</title>
+    <title>About me</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             display: flex;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, p {
             text-align: center;
         }
 
-        h1 {
-            color: #333;
+        .personal-info, .education, .experience, .about-me {
+            border-top: 2px solid #ddd;
+            padding-top: 20px;
+			margin-bottom: 30px;
         }
 
-        p {
-            color: #555;
+        .education, .experience {
+            border-top: 2px solid #ddd;
+            padding-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .skills {
+		border-top: 2px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .skills ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .skills li {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            margin: 0 10px 10px 0;
+        }
+		
+		#profile-image {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+		
+		@media (max-width: 600px) {
+            .container {
+                width: 90%;
+            }
         }
     </style>
+	
+	<script>
+        // Función para crear un enlace de correo electrónico
+        function createEmailLink() {
+            var user = "info";
+            var domain = "creacionesxtreme.es";
+            var link = document.createElement("a");
+            link.href = "mailto:" + user + "@" + domain;
+            link.innerHTML = user + "@" + domain;
+            return link;
+        }
+
+        // Función para crear un enlace de teléfono
+        function createPhoneLink() {
+            var phoneNumber = "669923687";
+            var link = document.createElement("a");
+            link.href = "tel:" + phoneNumber;
+            link.innerHTML = phoneNumber;
+            return link;
+        }
+
+        // Función para inicializar y reemplazar los elementos en la página
+        function initializePage() {
+            var emailElement = document.getElementById("email");
+            var phoneElement = document.getElementById("phone");
+
+            if (emailElement) {
+                emailElement.appendChild(createEmailLink());
+            }
+
+            if (phoneElement) {
+                phoneElement.appendChild(createPhoneLink());
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="initializePage()">
 
     <div class="container">
-        <h1>¡Disponible Próximamente!</h1>
-        <p>Estamos trabajando en mejorar nuestro sitio web. Vuelve pronto para ver las novedades.</p>
+		<img id="profile-image" src=".mi_foto.png" alt="Antonio Muñoz photo">
+        <h1>Antonio Muñoz Pérez</h1>
+        <p>Administrador de sistemas | Desarrollador Web | Docente | Escritor</p>
+
+        <div class="personal-info">
+            <h2>Información Personal</h2>
+            <p>Email: <span id="email"></span></p>
+            <p>Teléfono: <span id="phone"></span></p>
+            <p>Dirección: Teruel (España)</p>
+        </div>
+		
+		<div class="about-me">
+            <h2>Sobre mí</h2>
+            <p>Muy pronto disponible</p>
+        </div>
+
+        <div class="education">
+            <h2>Educación</h2>
+            <ul>
+				<li><strong>CPIFP BAJO ARAGON (2021-2023)</strong> - Técnico superior de Desarrollo de Aplicaciones Multiplataforma</li>
+				<li><strong>CPEPA CUENCAS MINERAS (2017-2018)</strong> - Docencia de la formación profesional para el empleo</li>
+				<li><strong>IES SEGUNDO CHOMON (2010-2012)</strong> - Técnico superior en Administración de Sistemas Operativos en Red</li>
+				<li><strong>IES VALLE JILOCA (2008-2010)</strong> - Bachillerato de humanidades y ciencias sociales</li>
+            </ul>
+        </div>
+
+        <div class="experience">
+            <h2>Experiencia Laboral</h2>
+            <ul>
+				<li><strong>Administración General del Estado (2024-)</strong> - Técnico auxiliar de informática</li>
+                <li><strong>Inycom DGA (2022)</strong> - Técnico informático</li>
+				<li><strong>Sermicro DGT (2021-2022)</strong> - Técnico informático on-site</li>
+				<li><strong>Autónomo (2014-2022)</strong> - Técnico informático / programador / consultor</li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h2>Habilidades en programación</h2>
+            <ul>
+                <li>JAVA / KOTLIN</li>
+                <li>SQL</li>
+                <li>PHYTON</li>
+                <li>C#</li>
+                <li>HTML</li>
+            </ul>
+			<hr>
+			<h2>Habilidades en sistemas</h2>
+            <ul>
+                <li>LINUX</li>
+                <li>WINDOWS SERVER</li>
+                <li>DOCKERS</li>
+                <li>SEGURIDAD</li>
+                <li>DEVOPS</li>
+            </ul>
+        </div>
     </div>
 
 </body>
