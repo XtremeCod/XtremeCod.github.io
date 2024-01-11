@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>About me</title>
     <style>
         body {
@@ -30,14 +31,14 @@
             text-align: center;
         }
 
-        .personal-info, .education, .experience, .my-projects, .base_conocimientos {
+        .personal-info, .education, .experience, .my-projects {
             border-top: 2px solid #ddd;
             padding-top: 20px;
 			margin-bottom: 30px;
         }
 		
 		.about-me p{
-			text-align: left;
+			text-align: justify;
         }
 		
 		.about-me {
@@ -165,6 +166,49 @@
             margin-left: auto;
             margin-right: auto;
         }
+		
+		.social-icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-top: 2px solid #ddd;
+            padding-top: 20px;
+			margin-bottom: 30px;
+			}
+		
+		.fa {
+			padding: 10px;
+			font-size: 30px;
+			width: 30px;
+			margin-left: 20px;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 50%;
+		}
+
+		.fa:hover {
+			opacity: 0.7;
+		}
+
+		.fa-youtube {
+			background: Red;
+			color: white;
+		}
+		
+		.fa-github {
+			background: black;
+			color: white;
+		}
+		
+		.fa-linkedin {
+			background: #0e76a8;
+			color: white;
+		}
+		
+		.fa-book {
+			background: #7fffd4;
+			color: black;
+		}
 		
 		@media (max-width: 600px) {
             .container {
@@ -351,8 +395,11 @@
 			
         </div>
 		
-		<div class="base_conocimientos">
-            <p><a href=https://docs.google.com/document/d/1D7fuqT1qVmupm6jXR2dhHC3-mPBuRODX49eE4Dw5O1A/edit?usp=sharing>BASE DE CONOCIMIENTO</a></p>
+		<div class="social-icons">
+            <a href="https://www.youtube.com/channel/UCBtD-nOTHXiFUH4yH0ssfjQ" target="_blank"><i class="fa fa-youtube"></i></a>
+            <a href="https://github.com/XtremeCod" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/antonio-mp-developer/" target="_blank"><i class="fa fa-linkedin"></i></a>
+			<a href="https://docs.google.com/document/d/1D7fuqT1qVmupm6jXR2dhHC3-mPBuRODX49eE4Dw5O1A/edit?usp=sharing" target="_blank"><i class="fa fa-book"></i></a>
         </div>
     </div>
 
